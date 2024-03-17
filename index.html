@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yash portfolio</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(0, 0, 34);
+            color: white;
+            font-family: Poppins/Poppins-Bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstsection>div {
+            width: 40%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+        }
+
+        .leftsection .button {
+            padding: 50px;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: whitesmoke;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            width: 90%;
+            margin: 60px 0;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 2.5rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .thirdsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .thirdsection h2 {
+            font-size: 2.9rem;
+        }
+
+        .thirdsection .row1 {
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .thirdsection .row2 {
+            margin-top: 20px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 100px;
+            width: 163px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 100px;
+            color: gray;
+            width: 150px;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #1a171a;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+        .icon{
+            color: black;
+        }
+
+        .contact {
+            position: relative;
+            padding: 30px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+        }
+
+        .contact .contact {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .content h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .contact .content p {
+
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container .contactInfo .box {
+            position: relative;
+            padding: 50px 0;
+            display: flex;
+        }
+
+        
+
+        .container .contactInfo .box .text {
+            display: flex;
+            margin-left: 20px;
+            margin-right: 50px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+        }
+
+        .container .contactInfo .box .text h3 {
+            font-weight: 300;
+            color: #00bcd4;
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+        .contactForm h2{
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+        }
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            color: #666;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        .contactForm .inputBox input:focus~span,
+        .contactForm .inputBox input:valid~span,
+        .contactForm .inputBox textarea:focus~span,
+        .contactForm .inputBox textarea:valid~span
+        {
+            color: #e91e63;
+            font-size: 20px;
+            transform: translateY(-20px);
+        }
+        .contactForm .inputBox input[type="submit"]{
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+        @media (max-width:991px){
+            .contact{
+                padding: 50px;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .container .contactInfo{
+                margin-bottom: 40px;
+            }
+            .container .contactInfo,
+            .contactForm{
+                width: 100%;
+            }
+        }
+
+
+
+
+
+        /*responsive website css*/
+
+
+        /* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 0, 34);
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(153, 153, 226);
+}
+
+/* Main section */
+#main {
+    padding: 50px 20px;
+}
+
+/* About section */
+#about {
+    padding: 50px 20px;
+}
+
+/* Contact section */
+#contact {
+    padding: 50px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a171a;
+    color: gray;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .firstsection>div {
+        width: 100%;
+    }
+
+    .rightsection img {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer ul {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* Your existing CSS */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for even smaller screens here */
+}
+
+/* Any other media queries as needed */
+
+
+
+        </style>
+        </head>
+        <body>
+        <nav>
+            <div class="left">YASH Portfolio </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main">
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi My name is <span class="purple">Yash</span>
+                <div> and I am a WEb Devloper</div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn"><a href="/yashsharma_cv.pdf">Download CV</a></button>
+                </div>
+
+            </div>
+            <div class="rightsection">
+                <img src="yash.png.jpeg" alt="">
+            </div>
+        </section>
+        </div>
+        <hr>
+        <div id="about">
+        <section class="secondsection">
+            <span class="text-gray">What Skills Did I Have</span>
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <div class="vertical-title">
+                        10th Passout(2018-2019)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi ipsam voluptatem
+                        iusto placeat laboriosam, velit error corporis eveniet recusandae!
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        10th Passout(2018-2019)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi ipsam voluptatem
+                        iusto placeat laboriosam, velit error corporis eveniet recusandae!
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        10th Passout(2018-2019)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi ipsam voluptatem
+                        iusto placeat laboriosam, velit error corporis eveniet recusandae!
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        10th Passout(2018-2019)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi ipsam voluptatem
+                        iusto placeat laboriosam, velit error corporis eveniet recusandae!
+                    </div>
+                </div>
+
+        </section>
+        </div>
+        <hr>
+        <div id="contact">
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est quas aut, commodi itaque
+                    accusantium laborum sapiente neque aliquam. Reprehenderit.</p>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><div>
+                                <div class="text">
+                                    <h3>Address</h3>
+                                    <p>H.no 1266/sec 4 L.I.G. Karnal,Haryana </p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="text">
+                                    <h3>Phone</h3>
+                                    <p>9050909019</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"></div>
+                                <div class="text">
+                                    <h3>Email</h3>
+                                    <p>syash2659@gmail.com</p>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="contactForm">
+                                    <form action="">
+                                        <h2>Send Message</h2>
+                                        <div class="inputBox">
+                                            <input type="text" name="" required="required">
+                                            <span>Full Name</span>
+                                        </div>
+                                        <div class="inputBox">
+                                            <input type="text" name="" required="required">
+                                            <span>Email</span>
+                                        </div>
+                                        <div class="inputBox">
+                                            <textarea required="required"></textarea>
+                                            <span>Type your message....</span>
+                                        </div>
+                                        <div class="inputBox">
+                                            <input type="submit" name="" value="Send">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+        </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Yash portfolio</h3>
+            </div>
+          
+        <div class="footer-rights">
+            Copyright&#169 www.yashportfolio.com || All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Computer  science student', 'Web Devloper', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+
+
+</body>
+
+</html>
